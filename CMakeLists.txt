@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.22)
+    cmake_minimum_required(VERSION 3.22)
 
 # Static MSVC runtime so the plugin doesn't need extra Visual C++ redistributables
 set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
@@ -26,10 +26,10 @@ juce_add_plugin(AcidSynth
     PRODUCT_NAME "AcidSynth"
     COPY_PLUGIN_AFTER_BUILD FALSE)
 
-target_sources(AcidSynth PRIVATE
-    Source/PluginProcessor.cpp
-    Source/PluginProcessor.h
-    Source/Acid303.h)
+target_sourcestarget_sources(AcidSynth PRIVATE
+    PluginProcessor.cpp
+    PluginProcessor.h
+    Acid303.h)
 
 target_compile_definitions(AcidSynth PUBLIC
     JUCE_WEB_BROWSER=0
